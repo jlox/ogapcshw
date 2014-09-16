@@ -3,9 +3,11 @@ import java.util.*;
 
 public class Greeter {
     public void greet() {
-	System.out.println("Hello world!");
+	String s = new String("Hello world!");
+	System.out.println(s);
+	ungreet();
     }
-    public voide ungreet() {
+    public void ungreet() {
 	System.out.println("I'm out.");
     }
 }
