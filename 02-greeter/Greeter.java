@@ -1,13 +1,11 @@
-import java.io.*;
-import java.util.*;
-
 public class Greeter {
+    public String greeting = new String("Hello world!");
     public void greet() {
-	String s = new String("Hello world!");
-	System.out.println(s);
-	ungreet();
+	// uncomment the following line for question 2
+	// String greeting = new String("Sup!");
+	System.out.println(greeting);
     }
     public void ungreet() {
-	System.out.println("I'm out.");
+	System.out.println("I'm out!");
     }
 }
