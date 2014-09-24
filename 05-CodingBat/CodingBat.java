@@ -27,7 +27,7 @@ public boolean nearHundred(int n) {
   return false;}
 }
 
-/* working */
+/* working - Jason Shin */
 public int teaParty(int tea, int candy) {
   if (tea < 5 || candy < 5) {
   return 0;
@@ -37,7 +37,7 @@ public int teaParty(int tea, int candy) {
   return 1;}
 }
 
-/* working */
+/* working - Derrick Lui*/
 public boolean lastDigit(int a, int b, int c) {
   if (a%10 == b%10 || a%10 == c%10 || b%10 == c%10){
   return true;
