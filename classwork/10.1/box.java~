@@ -1,0 +1,12 @@
+public String box(int r, int c){
+    String row = "";    
+    while (r < 0){
+	while (c < 0){
+	    row = row + "*";
+	    c = c - 1;
+	}
+	row = row + "\n";
+	r = r - 1;
+    }
+}
+
