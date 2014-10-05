@@ -1,0 +1,14 @@
+public class moreshapes{
+    public String line (String x, int l){
+	s = "";
+	while (l > 0){
+	    s = s + x;
+	    l = l - 1;
+	}
+	return s;
+    }
+
+    public String frame (int r, int c) {
+	String s = "";
+	int count = 1;
+	while ((count != 1) && (count != r)){
