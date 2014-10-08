@@ -11,6 +11,9 @@ public class Driver {
 	w.attack(m);
 	m.attack(w);
 	w.attack(w);
+
+	System.out.println(w.toString());
+	System.out.println(w);
     }
 
 
