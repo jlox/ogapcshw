@@ -1,7 +1,18 @@
 /* superclass of Warrior and Mage */
 public class Basechar {
     private int health=20;
-    private String name;
+    private String name="default name";
+
+    public Basechar(){
+	setName("Default");
+    }
+    public Basechar(String n){
+	setName(n);
+    }
+
+    public String toString(){
+	return this.getName();
+    }
 
     public defaultName(){
 	this.name = "Jakob";
@@ -11,10 +22,10 @@ public class Basechar {
 	System.out.println(this.getName()+" is attacking "+other.getName());
     }
 
-    public setName(String name){
+    public void setName(String name){
 	this.name = name;
     }
-    public void getName(){
+    public String getName(){
 	return name;
     }
 
@@ -22,6 +33,6 @@ public class Basechar {
 	return health;
     }
     public void setHealth(int i){
-	health = 1;
+	health = i;
     }
 }
