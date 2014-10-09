@@ -3,6 +3,10 @@ public class Basechar {
     private int health=20;
     private String name;
 
+    public defaultName(){
+	this.name = "Jakob";
+    }
+
     public void attack(Basechar other){
 	System.out.println(this.getName()+" is attacking "+other.getName());
     }
