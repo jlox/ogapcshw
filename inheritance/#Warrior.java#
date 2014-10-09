@@ -6,7 +6,7 @@ public class Warrior extends Basechar{
 	// even if you don't write this, the super constructor will always
 	// be called as the first line of a subclass' constructor
 	//super();
-	super(n);
+	super(n); // call the 1 param super constructor
 	setName(n);
     }
 
