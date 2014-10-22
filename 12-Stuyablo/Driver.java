@@ -163,9 +163,6 @@ public class Driver{
 						System.out.println("The ogre charges at you and you dodge, but he manages to smash his club into your stomach. Ouch, you k bro?");
 						System.out.println("You lost " + oppdmg + " HP and you now have " + playerhealth + " HP left.");
 					}
-					enc = "false";
-				}
-			}
 				else if (word1.equals("Flee")){
 					System.out.println("You decide to flee from the enemy.");
 					enc = "false";
@@ -178,6 +175,8 @@ public class Driver{
 					System.out.println("You can't do that.");
 				}
 				input = "";
+				}
+			}
 			if (word1.equals("Move")){
 				System.out.println("You go " + word2 + " a few steps.");
 				float ogreEnc = rand.nextFloat();
