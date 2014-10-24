@@ -1,4 +1,3 @@
-public class code{
 // returns error "Syntax error on token "return", invalid Type"
 public int[] frontPiece(int[] nums) {
   int[] result;
@@ -34,5 +33,4 @@ public int sum13(int[] nums) {
   }
   }
   return answer;
-}
 }
