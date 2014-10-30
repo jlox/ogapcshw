@@ -1,0 +1,18 @@
+public boolean more14(int[] nums) {
+  int ones = 0;
+  int fours = 0;
+  for (int c=0;c<nums.length;c++){
+      if (nums[c] == 1){
+	  ones = ones + 1;
+      } else {
+	  if (nums[c] == 4){
+	      fours = fours + 1;
+	  }
+      }
+  }
+  if (ones > fours){
+      return true;
+  } else {
+      return false;
+  }
+}
