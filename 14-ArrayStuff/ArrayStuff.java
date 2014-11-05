@@ -1,11 +1,36 @@
+import java.util.*;
+
 public class ArrayStuff{
-    public int find(int[] ray, int n){
+    private int[] a;
+    private Random rnd;
+
+    public ArrayStuff(int n){
+	rnd = new Random();
+	a = new int[n];
+	for (int i=0;i<a.length;i++){
+	    a[i] = rnd.nextInt(20);
+	}
+    }
+
+    public ArrayStuff(){
+	this(100);
+    }
+
+    public String toString(){
+	String s = "";
+	for (int i=0;i<a.length;i++){
+	    s = s+a[i]+", ";
+	}
+	return s;
+    }
+    
+    public int find(int n){
 	int count = 0;
 	int result = -1;
-	while (count < ray.length){
-	    if (ray[count] ==  n) {
+	while (count < a.length){
+	    if (a[count] ==  n) {
 		result = count;
-		count = ray.length;
+		count = a.length;
 	    } else {
 		count = count + 1;
 	    }
@@ -25,5 +50,25 @@ public class ArrayStuff{
 	    }
 	}
 	return stalin;
+    }
+
+    public int freq(int n){
+	int count = 0;
+	for (int i=0;i<a.length;i++){
+	    if (a[i]==n){
+		count = count + 1;
+	    }
+	}
+	return count;
+    }
+
+    public int mode(int[] A){
+	int count = 0;
+        for (int i=0;i<A.length;i++){
+	    if (freq(A[i]) > count){
+	        count = freq(A[i]);
+	    }
+	}
+	return count;
     }
 }
