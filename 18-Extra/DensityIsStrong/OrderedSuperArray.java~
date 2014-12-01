@@ -37,6 +37,9 @@ public class WordSearch{
     	}
     	return s;
     }
+    public char value(int r, int c){
+    	return board[r][c];
+    }
     public boolean addWord(String w){
     	int rand = rnd.nextInt(8);
     	if (rand == 0){
@@ -68,44 +71,53 @@ public class WordSearch{
     public boolean matching(int n, String w, int r, int c){
 	boolean matching = true;
 	char val;
-	for (int i=0;i<w.length();i++){
-	    val = board[r][c];
-	    if (!(val=='.') && !(val==w.charAt(i))){
+	int i = 0;
+	while (i<w.length()&&matching){
+	    //for (int i=0;i<w.length();i++){
+	    if(r>29||c>29){
 		matching = false;
 	    }
-	    if (n == 0){
-		c++;
-	    }
-	    else if (n == 1){
-		c--;
-	    }
-	    else if (n == 2){
-		r++;
-	    }
-	    else if (n == 3){
-		r--;
-	    }
-	    else if (n == 4){
-		r--;
-		c++;
-	    }
-	    else if (n == 5){
-		r++;
-		c++;
-	    }
-	    else if (n == 6){
-		r++;
-		c--;
-	    }
-	    else if (n == 7){
-		r--;
-		c--;
+	    else{
+		val = board[r][c];
+		if (!(val=='.') && !(val==w.charAt(i))){
+		    matching = false;
+		}
+		if (n == 0){
+		    c++;
+		}
+		else if (n == 1){
+		    c--;
+		}
+		else if (n == 2){
+		    r++;
+		}
+		else if (n == 3){
+		    r--;
+		}
+		else if (n == 4){
+		    r--;
+		    c++;
+		}
+		else if (n == 5){
+		    r++;
+		    c++;
+		}
+		else if (n == 6){
+		    r++;
+		    c--;
+		}
+		else if (n == 7){
+		    r--;
+		    c--;
+		}
+		i++;
 	    }
 	}
 	return matching;
     }
     char[] letters = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l',
 				'm','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    //char[] letters = new char[]{'-'};
     public void fill(){
 	for (int row=0;row<board.length;row++){
 	    for (int col=0;col<board[0].length;col++){
@@ -120,7 +132,7 @@ public class WordSearch{
     int count;
     public boolean addWordH1(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(0, w, r, c)){
     	    	for (int i=0;i<w.length();i++){
     	    	    //System.out.println(w.charAt(i));
@@ -139,7 +151,7 @@ public class WordSearch{
     }
     public boolean addWordH2(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(1, w, r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -157,7 +169,7 @@ public class WordSearch{
     }
     public boolean addWordV1(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(2, w, r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -175,7 +187,7 @@ public class WordSearch{
     }
     public boolean addWordV2(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(3, w, r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -193,7 +205,7 @@ public class WordSearch{
     }
     public boolean addWordD1(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(4, w,r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -212,7 +224,7 @@ public class WordSearch{
     }
     public boolean addWordD2(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(5, w, r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -231,7 +243,7 @@ public class WordSearch{
     }
     public boolean addWordD3(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(6, w, r ,c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);
@@ -250,7 +262,7 @@ public class WordSearch{
     }
     public boolean addWordD4(String w, int r, int c){
     	count = 0;
-    	while (count<5){
+    	while (count<50){
 	    if (matching(7, w, r, c)){
 		for (int i=0;i<w.length();i++){
 		    board[r][c] = w.charAt(i);

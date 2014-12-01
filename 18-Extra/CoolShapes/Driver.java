@@ -1,6 +1,11 @@
 import java.util.*;
 import java.io.*;
 
+/*
+so we basically just have to add in spaces right??? and then like not have other things
+in other places???
+*/
+
 public class Driver{
     public static void main(String[] args){
     	Random r = new Random();
@@ -27,19 +32,37 @@ public class Driver{
 	    ArrayList<Integer> al = new ArrayList<Integer>();
 	    int index;
 	    int count = 0;
-	    for (int i=0;i<30;i++){
+	    //for (int i=0;i<30;i++){
+	    while(count<30){
 	    	index = r.nextInt(words.size());
 	    	while (al.contains(index)){
 		    index = r.nextInt(words.size());
-	    	};
+	    	}
 	    	if(ws.addWord(words.get(index))){
 	    	al.add(index);
 	    	count++;
 	    	}
 	    }
 
-	    //ws.fill();
+	    ws.fill();
 	    System.out.println(ws.toString());
+	    String s = "";
+	    int num = 0;
+	    int spaces;
+	    for (int i=0;i<al.size();i++){
+		spaces = 15 - words.get(al.get(i)).length();
+		s += words.get(al.get(i));
+		while (spaces>0){
+		    s += " ";
+		    spaces--;
+		}
+		num++;
+		if (num == 5){
+		    s += "\n";
+		    num = 0;
+		}
+	    }
+	    System.out.println(s);
 	    System.out.println(count);
     }
 }
