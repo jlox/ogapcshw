@@ -96,4 +96,52 @@ public class sarray {
 	    data[j+1] = value;
 	}
     }
+
+    public void ssort() {
+	for (int i=0;i<data.length;i++){
+	    String temp = "";
+	    int index;
+	    for (int j=0;j<data.length;j++){
+		if (data[j].compareTo(data[i]) < 0){
+		    index = j;
+		    temp = data[i];
+		    data[i] = data[index];
+		    data[index] = temp;
+		}
+	    }
+
+	}
+    }
+    /*
+    public void minessort() {
+	int index = 0;
+	int otherdex = 1;
+	int mindex = 0;
+	String p1 = "";
+	String replacer = "";
+	while (index<data.length) {
+	    while (otherdex<data.length) {
+		if (data[index].compareTo(data[otherdex]) < 0){
+		    mindex = index;
+		    otherdex = otherdex + 1;
+		} else {
+		    if (data[index].compareTo(data[otherdex]) > 0){
+			mindex = otherdex;
+			otherdex = otherdex + 1;
+		    } else {
+			if (data[index].compareTo(data[otherdex]) == 0) {
+			    mindex = index;
+			    otherdex = otherdex + 1;
+			}
+		    }
+		}
+	    }
+	    p1 = data[index];
+	    replacer = data[mindex];
+	    data[index] = replacer;
+	    data[replacer] = p1;
+	    index = index + 1;
+	}
+    }
+    */		
 }
