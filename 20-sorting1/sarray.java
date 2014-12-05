@@ -99,49 +99,33 @@ public class sarray {
 
     public void ssort() {
 	for (int i=0;i<data.length;i++){
-	    String temp = "";
+	    String holder = "";
 	    int index;
-	    for (int j=0;j<data.length;j++){
+	    for (int j=0;j<data.length-1;j++){
 		if (data[j].compareTo(data[i]) < 0){
 		    index = j;
-		    temp = data[i];
+		    holder = data[i];
 		    data[i] = data[index];
-		    data[index] = temp;
+		    data[index] = holder;
 		}
 	    }
 
 	}
     }
-    /*
-    public void minessort() {
-	int index = 0;
-	int otherdex = 1;
-	int mindex = 0;
-	String p1 = "";
-	String replacer = "";
-	while (index<data.length) {
-	    while (otherdex<data.length) {
-		if (data[index].compareTo(data[otherdex]) < 0){
-		    mindex = index;
-		    otherdex = otherdex + 1;
-		} else {
-		    if (data[index].compareTo(data[otherdex]) > 0){
-			mindex = otherdex;
-			otherdex = otherdex + 1;
-		    } else {
-			if (data[index].compareTo(data[otherdex]) == 0) {
-			    mindex = index;
-			    otherdex = otherdex + 1;
-			}
-		    }
+
+    public void bubblesort(){
+	for (int i=0;i<data.length;i++){
+	    String holder = "";
+	    int index;
+	    for (int j=0;j<data.length;j++){
+		if (data[j].compareTo(data[j+1])>0){
+		    index = j;
+		    holder = data[j];
+		    data[j] = data[j+1];
+		    data[j+1] = holder;
 		}
 	    }
-	    p1 = data[index];
-	    replacer = data[mindex];
-	    data[index] = replacer;
-	    data[replacer] = p1;
-	    index = index + 1;
 	}
+		    
     }
-    */		
 }
