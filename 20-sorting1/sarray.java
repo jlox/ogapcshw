@@ -1,6 +1,9 @@
 public class sarray {
     private String[] data;
     private int lastIndex;
+    public int bubcount = 0;
+    public int icount = 0;
+    public int scount = 0;
 
     public sarray() {
 	data = new String[5];
@@ -84,17 +87,19 @@ public class sarray {
     }
 
     public void isort() {
-	int i = 0;
+	int i = 1;
 	while (i<data.length) {
 	    String value = data[i];
 	    int j = i - 1;
 	    while (j > -1 && data[j].compareTo(value) > 0){
 		data[j+i] = data[j];
-		j = j - 1;
+		j = j--;
+		icount ++;
 	    }
-	    i = i + 1;
+	    i = i++;
 	    data[j+1] = value;
 	}
+	
     }
 
     public void ssort() {
@@ -107,6 +112,7 @@ public class sarray {
 		    holder = data[i];
 		    data[i] = data[index];
 		    data[index] = holder;
+		    scount ++;
 		}
 	    }
 
@@ -123,9 +129,15 @@ public class sarray {
 		    holder = data[j];
 		    data[j] = data[j+1];
 		    data[j+1] = holder;
+		    bubcount ++;
 		}
 	    }
 	}
 		    
     }
+    /*
+    public void builtin() {
+	Arrays.sort(data);
+    }
+    */
 }

@@ -15,13 +15,20 @@ public class Driver {
 	    s.set("SPARTANS", 3);
 	    s.set("PINEAPPLE", 7);
 	    s.set("DOUBLELEG", 2);
+
+	    sarray r = s;
+	    sarray t = s;
+	    
 	    System.out.println(s.toString());
 	    s.isort();
 	    System.out.println(s.toString());
-	    s.ssort();
-	    System.out.println(s.toString());;
-	    s.bsort();
-	    System.out.println(s.toString());
+	    System.out.println("icount is: " + s.icount);
+	    r.ssort();
+	    System.out.println(r.toString());;
+	    System.out.println("scount is: " + r.scount);
+	    t.bsort();
+	    System.out.println(t.toString());
+	    System.out.println("bubcount is: " + t.bubcount);
 	    System.out.println(s.size());
 	    
 	} catch (ArrayIndexOutOfBoundsException e) {
