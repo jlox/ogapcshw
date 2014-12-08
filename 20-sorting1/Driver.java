@@ -20,7 +20,7 @@ public class Driver {
 	    System.out.println(s.toString());
 	    s.ssort();
 	    System.out.println(s.toString());;
-	    s.bubblesort();
+	    s.bsort();
 	    System.out.println(s.toString());
 	    System.out.println(s.size());
 	    

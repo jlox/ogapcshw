@@ -113,11 +113,11 @@ public class sarray {
 	}
     }
 
-    public void bubblesort(){
+    public void bsort(){
 	for (int i=0;i<data.length;i++){
 	    String holder = "";
 	    int index;
-	    for (int j=0;j<data.length;j++){
+	    for (int j=0;j<data.length-1;j++){
 		if (data[j].compareTo(data[j+1])>0){
 		    index = j;
 		    holder = data[j];

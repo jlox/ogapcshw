@@ -8,8 +8,19 @@ public class Driver {
 	    System.out.println(s.size());
 
 	    for (int i=0;i<10;i++){
-		s.add(i, "JEANNEEEEEE");
+		s.add("JEANNEEEEEE");
 	    }
+	    s.set("DERRICK", 5);
+	    s.set("ZAMANSKY", 8);
+	    s.set("SPARTANS", 3);
+	    s.set("PINEAPPLE", 7);
+	    s.set("DOUBLELEG", 2);
+	    System.out.println(s.toString());
+	    s.isort();
+	    System.out.println(s.toString());
+	    s.ssort();
+	    System.out.println(s.toString());;
+	    s.bubblesort();
 	    System.out.println(s.toString());
 	    System.out.println(s.size());
 	    
