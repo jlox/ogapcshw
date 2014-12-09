@@ -1,0 +1,14 @@
+public class Interval {
+    private int low;
+    private int high;
+    
+    public Interval(int l, int h) {
+	low = l;
+	high = h;
+    }
+
+    public String toString() {
+	System.out.println("(" + low +", " + high + ")");
+    }
+
+}
