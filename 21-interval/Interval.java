@@ -30,6 +30,7 @@ public class Interval {
 	System.out.println("Stuff");
     }
 
+<<<<<<< HEAD
     public int compareTo(Object other){
 	/* cast other to the appropriate type and store in a local variable
 	   for convenience
@@ -42,6 +43,24 @@ public class Interval {
 	    return this.low - other.low;
 	}
     }
+=======
+    public int compareTo(Interval other){
+	int result = 0;
+	if ((this.low < other.low) && (this.high < other.high)){
+	    result = -1;
+	} else {
+	    if ((this.low > other.low) && (this.high > other.high)){
+		result = 1;
+	    } else {
+		if ((this.low == other.low) && (this.high == other.high)){
+		    result = 0;
+		}
+	    }
+	}
+	return result;
+    }
+   
+>>>>>>> 61e66d134d25b327d40f8b66116e4dc5ae47ef88
     public static void main(String[] args) {
         /* for (int i=0;i<10;i++) {
 	    System.out.println(new Interval());
@@ -52,6 +71,11 @@ public class Interval {
 	printstuff(); //printStuff is static; we can call without an instance
 	Interval.printstuff(); //we can also call it right off a class
 
+<<<<<<< HEAD
+=======
+	System.out.println(compareTo(2, 19));
+
+>>>>>>> 61e66d134d25b327d40f8b66116e4dc5ae47ef88
 	Interval[] a = new Interval[10];
 	for (int i=0;i<a.length;i++){
 	    a[i] = new Interval();
