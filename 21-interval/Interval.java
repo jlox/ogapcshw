@@ -56,7 +56,7 @@ public class Interval {
 	printstuff(); //printStuff is static; we can call without an instance
 	Interval.printstuff(); //we can also call it right off a class
 
-	System.out.println(compareTo(2, 19));
+	//System.out.println(compareTo(2, 19));
 
 	Interval[] a = new Interval[10];
 	for (int i=0;i<a.length;i++){

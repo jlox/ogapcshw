@@ -1,0 +1,28 @@
+Katie and Lian's Repository: https://github.com/kaytrean/Project
+
+BaseChar.java
+Everything seems pretty straightforward here!
+
+Boys.java
+The code is quite short, but everything seems to make sense. From what I can tell, it's just something that will be inherited down the line.
+
+Gym.java / Prep.java
+Very similar code in these two files. So far, you've only gotten the "negative" reactions down, but that all seems to make sense and to work out.
+
+guilove.java
+This is a bit confusing, maybe add some comments? I think this turns into a sort of map, where you click buttons that will take you to different
+places in the game. You might want to comment some parts out/maybe put new names for things later, just because it might get confusing with super
+generic names.
+
+Sim.java
+Pretty sure this is just the character you would play. The only issue I see is that there's no real functions in here.
+
+Example.java
+This gets quite confusing, quite quickly. Maybe it's because it's all one function, but its a little overwhelming. Nothing too terrible, though, and
+the dialogue parts makes it much easier to understand the meaning of the code. You might want to put some comments or something, but I think it's fine.
+
+map.pde
+This is terrifying. I have no clue what's going on, and that might be because I don't know .pde, but I think that even if I did it would be a bit 
+overwhelming. Use some more comments, maybe?
+
+Overall, I think I understand the code fairly well.  
